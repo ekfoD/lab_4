@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.lab_4.Controllers.DataController">
+   <children>
+      <Text layoutX="52.0" layoutY="353.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Priskirti studentą grupei" textAlignment="CENTER" wrappingWidth="212.5367431640625">
+         <font>
+            <Font name="Arial Bold" size="21.0" />
+         </font>
+      </Text>
+      <Text layoutX="335.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grupės" textAlignment="CENTER" wrappingWidth="212.5367431640625">
+         <font>
+            <Font name="Arial Bold" size="21.0" />
+         </font>
+      </Text>
+      <Text layoutX="299.0" layoutY="377.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Importuoti" textAlignment="CENTER" wrappingWidth="142.9366455078125">
+         <font>
+            <Font name="Arial Bold" size="21.0" />
+         </font>
+      </Text>
+      <Text layoutX="434.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Eksportuoti" textAlignment="CENTER" wrappingWidth="129.336669921875">
+         <font>
+            <Font name="Arial Bold" size="21.0" />
+         </font>
+      </Text>
+      <Button layoutX="328.0" layoutY="400.0" mnemonicParsing="false" onAction="#importData" text="Importuoti">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="457.0" layoutY="400.0" mnemonicParsing="false" onAction="#exportData" text="Exportuoti">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Text layoutX="46.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sukurti studentą" textAlignment="CENTER" wrappingWidth="212.5367431640625">
+         <font>
+            <Font name="Arial Bold" size="21.0" />
+         </font>
+      </Text>
+      <Text layoutX="46.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sukurti grupę" textAlignment="CENTER" wrappingWidth="212.5367431640625">
+         <font>
+            <Font name="Arial Bold" size="21.0" />
+         </font>
+      </Text>
+      <Text layoutX="335.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Studentai" textAlignment="CENTER" wrappingWidth="212.5367431640625">
+         <font>
+            <Font name="Arial Bold" size="21.0" />
+         </font>
+      </Text>
+      <Button layoutX="126.0" layoutY="457.0" mnemonicParsing="false" onAction="#assignStudentToGroup" text="Priskirti">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="178.0" layoutY="279.0" mnemonicParsing="false" onAction="#createGroup" text="Sukurti">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="178.0" layoutY="156.0" mnemonicParsing="false" onAction="#createStudent" text="Sukurti">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Text layoutX="34.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vardas" textAlignment="CENTER" wrappingWidth="117.33673095703125">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="152.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pavardė" textAlignment="CENTER" wrappingWidth="117.33673095703125">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="34.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grupė" textAlignment="CENTER" wrappingWidth="117.33673095703125">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Text>
+      <TextField fx:id="studentNameField" layoutX="40.0" layoutY="93.0" prefHeight="26.0" prefWidth="105.0" />
+      <TextField fx:id="studentSurnameField" layoutX="158.0" layoutY="93.0" prefHeight="26.0" prefWidth="105.0" />
+      <Text layoutX="34.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pavadinimas" textAlignment="CENTER" wrappingWidth="117.33673095703125">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Text>
+      <TextField fx:id="groupNameField" layoutX="40.0" layoutY="281.0" prefHeight="26.0" prefWidth="105.0" />
+      <Text layoutX="34.0" layoutY="404.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grupė" textAlignment="CENTER" wrappingWidth="117.33673095703125">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="152.0" layoutY="404.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Studentas" textAlignment="CENTER" wrappingWidth="117.33673095703125">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Text>
+      <ChoiceBox fx:id="creatingStudentGroupChoice" layoutX="39.0" layoutY="157.0" prefHeight="26.0" prefWidth="106.0" />
+      <ChoiceBox fx:id="assigningStudentGroupChoice" layoutX="39.0" layoutY="415.0" prefHeight="26.0" prefWidth="106.0" />
+      <ChoiceBox fx:id="assigningStudentStudentChoice" layoutX="161.0" layoutY="415.0" prefHeight="26.0" prefWidth="98.0" />
+      <Button layoutX="508.0" layoutY="457.0" mnemonicParsing="false" onAction="#goToAttendanceView" text="Pirmyn">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <VBox fx:id="groupTablePlaceHolder" layoutX="321.0" layoutY="234.0" prefHeight="118.0" prefWidth="239.0" style="-fx-background-color: white;" />
+      <VBox fx:id="studentTablePlaceHolder" layoutX="322.0" layoutY="47.0" prefHeight="143.0" prefWidth="239.0" style="-fx-background-color: white;" />
+   </children>
+</AnchorPane>
